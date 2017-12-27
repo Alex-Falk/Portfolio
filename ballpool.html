@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic - Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Alexander Falk</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Advanced Graphics for games</h1>
+							<span class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/ri7PLdAxPmw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></span>
+							<p>In this course i was introduced to different techniques for graphics programming. The coursework required me to create three scenes of my choosing to show off some of these effects.  I particularly enjoyed working on the tesselation, especially because it was not part of the taught content and I had to research myself how it works. Below i give a list of different graphical effects that I used for each scene.</p>
+							<p><b>Scene 1:</b>
+								<ul>
+									<li>Rain particle effects</li>
+									<li>Skeletal Animation (Using animation of the Hellknight from Doom)</li>
+									<li>Advanced lighting using  a spotlight</li>
+									<li>Processing that draws the spotlights cone</li>
+									<li>Real time shadows of the hellknight on the floor and himself</li>
+									<li>Scene Management (using Scene Nodes)</li>
+									<li>Particle Effects - rain falling from a given height in a given area. The spotlight lights these particles up.</li>
+								</ul>
+							</p>
+							<p><b>Scene 2:</b>
+								<ul>
+									<li>Heightmap generation using a given texture</li>
+									<li>Basic Lighting with ambient, diffuse and specular lighting as well as reflection of the skybox in the water</li>
+									<li>Environment mapping</li>
+									<li>Texture blending</li>
+									<li>Periodically changing textures</li>
+									<li>Post processing effects applying a sobel filter and a constrast calculation (these work in all scenes but are shown off here)</li>
+								</ul>
+							</p>
+							<p><b>Scene 3:</b>
+								<ul>
+									<li>Tesselation of a plane of 16x16 quads ("patches"). Each quad gets tesselated  to 64x64 quads. A heightmap is read in and applied to this using a scaling factor which allows the terrain to grow.</li>
+									<li>Tesselation of the water. This works similarly to the terrain, however it takes 32x32 quads ("patches") and applies two sine waves to the height in order to simulate the wave effect.</li>
+									<li>Particle effects: Lava particles emmitted from the volcano</li>
+									<li>Deffered Rendering: Each lava particle emmitted from the volcano has its own light attached to it. The lighting calculations are done seperately from the drawing of the actual scene. </li>
+								</ul>
+							</p>
+							<p><b>Other people's things:</b>
+								<ul>
+									<li>Skybox for Mountain scene by Hazel Whorley.</li>
+									<li>Skybox for Volcano scene by Sorbet.</li>
+									<li>Water texture: http://seamless-pixels.blogspot.co.uk/2012/10/tileable-water-texture.html</li>
+									<li>Heightmaps generated using: https://terrain.party/</li>
+									<li>Lava texture: https://sftextures.com/2015/05/27/lava-texture-with-small-red-stones/</li>
+									<li>Hellknight from Doom3 by id Software</li>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
