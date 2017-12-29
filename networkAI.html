@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Alex Falk Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Alexander Falk</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Advanced Game Tech - Networking and AI</h1>
+							<span class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/rlYH0_0A-tM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></span>
+							<p></p>
+							<p><b>Server Features:</b>
+								<ul>
+									<li>Generation of a random maze with a given size and complexity (paremeters recieved by user)</li>
+									<li>Control of Avatar (green cube) movement and pathfinding (using A*)</li>
+									<li>Control of the 'Hazards' (red cubes) using a FSM with the states 'Patrol','Chase' and 'Search'. The switching of states is based on
+									line of sight checks in the horizontal and vertical directions. The find state is activated if the hazard has been chasing an avatar and has lost sight. It will move to the last known position of the avatar and check if can see it again.</li>
+									<li>Collision response for avatar-avatar colissions and hazard-avatar colissions. Avatar-avatar colissions are simply done by moving the avatars back to the previous tile-center they passed and then stop. In order to start moving again the client can choose a new end position. Hazard-avatar colissions 'kill' the client's avatar and the hazard will switch back to the 'patrol' state</li>
+									<li>Sending maze information as well as avatar/hazard positions and client specific paths for rendering clientside</li>
+								</ul>
+							</p>
+							<p><b>Client Features:</b>
+								<ul>
+									<li>Rendering of the maze in 3D as well as renering of avatars and hazard positions</li>
+									<li>Possibilty of rendering the path of the given client</li>
+									<li>The client can point and click tiles in the maze to select start (right click) and end (left click) positions. This information is then sent to the server for pathfinding calculations.</li>
+								</ul>
+							</p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
