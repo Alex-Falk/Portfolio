@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Alex Falk Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Alexander Falk</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Fast Prototyping of a game using the Unreal Engine</h1>
+							<span class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/wzvcy0FLRkM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></span>
+                            <p>This prototype is a 2 player splitscreen game in which the goal is to paint a certain amount of the enviroment before the opposing player does. It includes the following features:</p>
+                            <ul>
+								<li>Painting on contact (using decals attached to box colliders to prevent large overlaps)</li>
+								<li>An "Ammo" Paint level that decreases when the player paints the environment. This decreases the size of the ball and therefore the area it paints</li>
+								<li>Paint 'pool' (the square areas) which allows the player to recharge their paint level up to 150%. If the player goes onto a pool of the other player's colour they loose all their paint instead</li>
+                                <li>4 different kinds of pickups:</li>
+                                <ul>
+                                    <li>Double Size: Increases the "ammo" level to double (or the max value of 200%)</li>
+                                    <li>Double Speed: Speeds up the player by doubling the torque applied to it on key presses for 10 seconds</li>
+                                    <li>Infinite Paint: Lets the player paint without decreasing the ammo level and size for 10 seconds</li>
+                                    <li>Paint bomb: Allows the player to shoot a 'bomb' of paint that paints a large area on impact</li>
+                                </ul>
+								<li>There is simple rubber-banding for the pickups that if a player is 10% of the max score ahead of the other, then the player who is ahead only gets the pickup for 5 seconds while the one behind gets them for 15.</li>
+								<li>When a player reaches the maximum score the game will end and allow the player to either choose restart or quit</li>
+							</ul>
+							</p>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
