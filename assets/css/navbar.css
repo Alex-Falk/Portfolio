@@ -1,0 +1,34 @@
+@import "colors.css";
+
+/* The navbar menu */
+.navbar {
+    height: auto; /* Full-height: remove this if you want "auto" height */
+    width: 100%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Navbar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 20px 0 ;
+    display: flex;
+    border-bottom: solid var(--color4);
+  }
+  
+  /* The navigation menu links */
+  .navbar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color3);
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .navbar a:hover {
+    color: var(--color5);
+  }
+    
+  /* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .navbar {padding-top: 15px;}
+    .navbar a {font-size: 18px;}
+  }

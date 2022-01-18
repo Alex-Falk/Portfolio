@@ -1,0 +1,167 @@
+
+<html>
+	<head>
+		<title>Alex Falk Experience</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="assets/css/index.css" />
+	</head>
+
+    <body>
+    	<!-- Navigation -->
+		<div class="navbar">
+			<a href="index.html">Overview</a>
+			<a href="aboutme.html">About Me</a>
+			<a href="Experience.html">Experience</a>
+			<a href="projects.html">Other Projects</a>
+			<a href="#four">Hobbies</a>
+		</div>
+        
+        <h1>University Projects</h1>
+        <div class="main" width="100%">
+            <div class="box">
+                <input id="softbody" onclick="SelectProject('softbody')" type="image" src="images/softbody.png" width="100%" height=200px/>
+            </div>
+            <div class="box">
+                <input id="elbloob" onclick="SelectProject('elbloob')" type="image" src="images/elbloob.png" width="100%" height=200px/>
+            </div>
+            <div class="box">
+                <input id="graphics" onclick="SelectProject('graphics')" type="image" src="images/graphics.png" width="100%" height=200px/>
+            </div>
+            <div class="box">
+                <input id="physics" onclick="SelectProject('physics')" type="image" src="images/physics.png" width="100%" height=200px/>
+            </div>
+            <div class="box">
+                <input id="ue4" onclick="SelectProject('ue4')" type="image" src="images/ue4.png" width="100%" height=200px/>
+            </div>
+        </div>
+        
+        <div id="softbody-text" class="main" style="border: solid var(--color4); border-radius: 25px;">
+            <div class="box">
+                <h1>GPU Modelled Softbody (with CUDA)</h1>
+                <p>In my "Advanced Game Tech" module one of the advanced tasks was to create a GPU accelerated soft-body. I created this using a set of points connected to each other by springs. Both the spring interactions and the other physics acting on the particles (collisions with other objects and gravity) are calculated on the GPU using CUDA (see code here). For this project I used C++ and the NCLGL framework from my graphics course.<br>
+                Each update the soft body is calculated in the following way:</p>
+                <ul>
+                    <li>Calculate the collisions of each node with other objects in parallel</li>
+                    <li>Calculate the spring constraints in 8 separate parallelisable sets. For a set to be parallel each node can only be affected by one spring</li> 
+                    <li>Repeat this for 5 passes to achieve a better result</li>
+                </ul>
+                
+                <p>The rendering of the soft-body is done using openGL and each of the physical node positions is used as a vertex for the mesh. These mesh vertices are then updated every frame.</p>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Mjj8oiJLEJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 25px;"></iframe>
+            </div>
+        </div>
+        <div id="elbloob-text" class="main" style="border: solid var(--color4); border-radius: 25px;">
+            <div class="box">
+                <h1>Group Project: "El Bloob"</h1>
+                <p>This was my Team project in my MSc Computer Games Engineering degree. We were tasked with making a multiplayer game in which players paint the enviroment with the examples of De Blob or Splatoon.</p>
+
+                <p>My Roles in the team project were:</p>
+                <ul>
+                    <li>Framework: We chose to base this project on the framework we were provided for the "Game Tech" course. Specifically we chose my version of it which I had expanded with my own code during that course.</li>
+                    <li>Git Admin: Handled all merges/merge conflicts to the develop branch and fixed resulting bugs.</li>
+                    <li>Networking: Implement the server-client system, Dead Reckoning and generally everything that needs to be sent over the network (using the ENet UDP library). This included working with other team members to make their implementation of features network compatible.</li>
+                    <li>Particle Effect: I created the particle effect seen in the videos by using an openGL compute shader</li>
+                    <li>The "paint pool" effect: There a pools of each colour of paint, the transparent part of that pool that represents the liquid is done with a tessellated quad and a sine wave applied to it</li>
+                    <li>QA, bug finding and fixing: To discover bugs to later be fixed either by myself or other team members.</li>
+                    <li>Sobel Shader: I wrote the shader for the 'cartoony' black outline effect and used my teammate's post processing system to add it to the game.</li>
+                </ul>
+                <p>The github repo for this project can be found here where the nclgl and ncltech libraries are based on my previous courseworks, the networking folder contains my networking code and the PC folder contains the code for the actual game, which I also contributed to.</p>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/IgmXKeS9seU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 25px;"></iframe>
+            </div>
+        </div>
+        <div id="graphics-text" class="main" style="border: solid var(--color4); border-radius: 25px;">
+            <div class="box">
+                <h1>Graphics For Games</h1>
+                <p>The goal of this project was in implement a rendering pipeline and show off an Array of different graphical effects and techniques. The video shows three separate scenes with the following effects:</p>
+                    
+                    <p>Scene 1:</p>
+                    <ul>
+                        <li>Rain particle effects</li>
+                        
+                        <li>Advanced lighting using a spotlight</li>
+                        
+                        <li>Real time shadows of the hellknight on the floor and himself</li>
+                        
+                        <li>Particle effects</li>
+                    </ul>
+
+                    <p>Scene 2:</p>
+                    <ul>
+                        <li>Height-map generation using a given texture</li>
+                    
+                        <li>Basic Lighting with ambient, diffuse and specular lighting as well as reflection of the skybox in the water</li>
+                    
+                        <li>Texture blending</li>
+                    
+                        <li>Periodically changing textures</li>
+                    
+                        <li>Post processing effects applying a sobel filter and a contrast calculation (these work in all scenes but are shown off here)</li>
+                    </ul>
+
+                    <p>Scene 3:</p>
+                    <ul>
+                        <li>Tessellation of a plane of 16x16 quads ("patches"). Each quad gets tessellated to 64x64 quads. A height-map is read in and applied to this using a scaling factor which allows the terrain to grow.</li>
+                    
+                        <li>Tessellation of the water. It takes 32x32 quads ("patches") and applies two sine waves to the height in order to simulate the wave effect</li>
+                    
+                        <li>Particle effects: Lava particles emitted from the volcano</li>
+                    
+                        <li>Deffered rendering</li>
+                    </ul>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ri7PLdAxPmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 25px;"></iframe>
+            </div>
+        </div>
+        <div id="physics-text" class="main" style="border: solid var(--color4); border-radius: 25px;">
+            <div class="box">
+                <h1>Physics Engine</h1>
+                <p>The goal of this project was to create a physics engine that could handle a certain amount of collision checks. The initial clip shows different physics integration methods at different framerates.</p>
+
+                <p>I implemented an octree for the physics engine to manage the collision checks in a more efficient manner. The red squares in the video show is adapting octree in action.</p>
+
+                <p>Later on in the video you can also see a ballpool filled with small blue balls, this is run on the GPU using cuda. The ball pool implementation was partially provided by the lecturer but I extended it such that elements from my physics system enact forces on the GPU modelled balls. The cloth shown in this video is the same as from the above video about the GPU modelled soft body.</p>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/f_6jUrX0kq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 25px;"></iframe>
+            </div>
+        </div>
+        <div id="ue4-text" class="main" style="border: solid var(--color4); border-radius: 25px;">
+            <div class="box">
+                <h1>Fast Prototyping with the Unreal Engine 4</h1>
+                <p>This prototype is a 2 player split-screen game in which the goal is to paint a certain amount of the environment before the opposing player does. It includes the following features:</p>
+                <ul>
+                    <li>Painting on contact (using decals attached to box colliders to prevent large overlaps)</li>
+                
+                    <li>An "Ammo" Paint level that decreases when the player paints the environment. This decreases the size of the ball and therefore the area it paints</li>
+                
+                    <li>Paint 'pool' (the square areas) which allows the player to recharge their paint level up to 150%. If the player goes onto a pool of the other player's colour they loose all their paint instead</li>
+                
+                    <li>4 different kinds of pickups:</li>
+                    <ul>
+                        <li>Double Size: Increases the "ammo" level to double (or the max value of 200%)</li>
+                    
+                        <li>Double Speed: Speeds up the player by doubling the torque applied to it on key presses for 10 seconds</li>
+                    
+                        <li>Infinite Paint: Lets the player paint without decreasing the ammo level and size for 10 seconds</li>
+                    
+                        <li>Paint bomb: Allows the player to shoot a 'bomb' of paint that paints a large area on impact</li>
+                    </ul>
+                    <li>There is simple rubber-banding for the pickups that if a player is 10% of the max score ahead of the other, then the player who is ahead only gets the pickup for 5 seconds while the one behind gets them for 15 seconds</li>
+                
+                    <li>When a player reaches the maximum score the game will end and allow the player to either choose restart or quit</li>
+                </ul>
+            </div>
+            <div class="box">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/wzvcy0FLRkM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 25px;"></iframe>
+            </div>
+        </div>
+    </body>
+
+    <script src="js/projects.js"></script>
+
+</html>

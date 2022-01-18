@@ -1,0 +1,57 @@
+@import "navbar.css";
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--color1);
+  }
+    
+  h1 {
+  }
+  
+  body {
+    margin: 5 auto;
+    padding-top: 100px;
+    width: 90%;
+  }
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 4;
+  height: auto;
+}
+
+.left, .right {
+  flex: 1;
+  padding: 5px;
+}
+
+  .left {
+    order: 1;
+  }
+
+  .right {
+    order: 2;
+  }
+  
+  .box {
+    flex: 1;
+    margin: 5;
+    padding: 5;
+    border-radius: 25px;
+  }
+
+  p, 
+  li {
+    font-size: 18px;
+  }
+  
+  
+  a {
+    text-decoration: none;
+  }
+
+  input[type="image"] {
+    border-radius: 25px;
+  }
