@@ -90,14 +90,16 @@
     width: 75%;
   }
 
-  @media only screen and (max-width: 800px) {
+  .bordered {
+    border: solid var(--color4);
+    border-radius: 25px;
+  }
+
+  @media only screen and (max-width: 700px) {
     .width25 { width: 100%;}
     .width75 { width: 100%;}
     .about { flex: 1 0 100%;}
     .wideAbout { flex: 1 0 100%; aspect-ratio: 2;}
   }
 
-  .bordered {
-    border: solid var(--color4);
-    border-radius: 25px;
-  }
+
