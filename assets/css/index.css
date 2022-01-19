@@ -30,23 +30,10 @@
   flex-wrap: wrap;
 }
 
-.left, .right {
-  flex: 1;
-  padding: 5px;
-}
-
 .fixed {
   position: fixed;
 }
 
-  .left {
-    order: 1;
-  }
-
-  .right {
-    order: 2;
-  }
-  
   .box, .project, .experience, .about {
     margin: 5;
     padding: 5;
@@ -90,6 +77,14 @@
     width: 75%;
   }
 
+  .indexPic {
+    flex: 0 4 70%;
+  }
+
+  .indexText {
+    flex: 1 0 25%;
+  }
+
   .bordered {
     border: solid var(--color4);
     border-radius: 25px;
@@ -100,6 +95,9 @@
     .width75 { width: 100%;}
     .about { flex: 1 0 100%;}
     .wideAbout { flex: 1 0 100%; aspect-ratio: 2;}
+    .fixed { position: relative;}
+    .idexPic { flex: 1 0 100%;}
+    .indexText { flex: 1 0 100%;}
   }
 
 
