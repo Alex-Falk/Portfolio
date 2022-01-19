@@ -34,11 +34,10 @@
     color: var(--color5);
   }
     
-  /* On smaller screens, where height is less than 450px, change the style of the navbar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .navbar {padding-top: 15px;}
-    .navbar a {font-size: 18px;}
+  @media screen and (max-width: 700px) {
+    .navbar a { font-size: 12px;}
   }
+
 
   .socialbar {
     position: fixed;

@@ -58,7 +58,15 @@
   }
 
   .about {
-    flex: 1 0 25%;
+    flex: 1 0 30%;
+    aspect-ratio: 2;
+    border-radius: 25px;
+  }
+
+  .wideAbout {
+    flex: 1 0 100%;
+    aspect-ratio: 6;
+    border-radius: 25px;
   }
 
   p, 
@@ -80,6 +88,13 @@
 
   .width75 {
     width: 75%;
+  }
+
+  @media screen and (max-width: 700px) {
+    .width25 { width: 100%;}
+    .width75 { width: 100%;}
+    .about { flex: 1 0 100%;}
+    .wideAbout { flex: 1 0 100%; aspect-ratio: 2;}
   }
 
   .bordered {
