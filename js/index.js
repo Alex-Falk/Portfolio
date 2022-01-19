@@ -6,9 +6,14 @@ var ihInput = document.getElementById("IH-button");
 var swInput = document.getElementById("SW-button");
 var lmInput = document.getElementById("LM-button");
 
-ih.style.display = "none";
-sw.style.display = "none";
-lm.style.display = "none";
+if (ih)
+    ih.style.display = "none";
+
+if (sw)
+    sw.style.display = "none";
+
+if (lm)
+    lm.style.display = "none";
 
 function selectExperience(name) {
     switch(name) {
