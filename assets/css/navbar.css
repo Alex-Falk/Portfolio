@@ -22,6 +22,12 @@
     font-size: 20px;
     color: var(--color3);
   }
+
+  .socialbar a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+  }
   
   /* When you mouse over the navigation links, change their color */
   .navbar a:hover {
@@ -32,4 +38,10 @@
   @media screen and (max-height: 450px) {
     .navbar {padding-top: 15px;}
     .navbar a {font-size: 18px;}
+  }
+
+  .socialbar {
+    position: fixed;
+    padding: 10px;
+    right: 0;
   }

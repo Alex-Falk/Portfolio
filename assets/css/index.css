@@ -35,6 +35,10 @@
   padding: 5px;
 }
 
+.fixed {
+  position: fixed;
+}
+
   .left {
     order: 1;
   }
@@ -51,7 +55,10 @@
 
   .project {
     flex: 1 0 40%;
+  }
 
+  .about {
+    flex: 1 0 25%;
   }
 
   p, 
