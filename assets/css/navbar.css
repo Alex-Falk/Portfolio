@@ -3,7 +3,7 @@
 /* The navbar menu */
 .navbar {
     height: auto; /* Full-height: remove this if you want "auto" height */
-    width: 100%; /* Set the width of the sidebar */
+    width: 50%; /* Set the width of the sidebar */
     position: fixed; /* Fixed Navbar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -12,6 +12,8 @@
     padding: 20px;
     display: flex;
     border-bottom: solid var(--color4);
+    padding-right: 50%;
+    flex-wrap: wrap;
   }
   
   /* The navigation menu links */
@@ -35,7 +37,7 @@
   }
     
   @media only screen and (max-width: 800px) {
-    .navbar a { font-size: 12px;}
+    .navbar a { font-size: 12px; padding: 2px 2px 2px 2px;}
   }
 
 
