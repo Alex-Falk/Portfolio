@@ -34,7 +34,7 @@
   position: fixed;
 }
 
-  .box, .project, .experience, .about {
+  .box, .project, .experience, .about, .noGrow {
     margin: 5;
     padding: 5;
     border-radius: 25px;
@@ -47,14 +47,25 @@
   .about {
     flex: 1 0 30%;
     aspect-ratio: 2;
-    border-radius: 25px;
+  }
+
+  .about input {
+    aspect-ratio: 2;
   }
 
   .wideAbout {
     flex: 1 0 100%;
     aspect-ratio: 6;
     border-radius: 25px;
+    align-items: center;
+    justify-content: center;
   }
+
+.noGrow {
+  width: fit-content;
+  margin: 10% 50;
+  display: block;
+}
 
   p, 
   li {
