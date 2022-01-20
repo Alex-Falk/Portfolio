@@ -1,7 +1,7 @@
 @import "navbar.css";
 
 * {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'times new roman';
     background-color: var(--color1);
   }
     
@@ -10,7 +10,7 @@
   
   body {
     margin: 5 auto;
-    padding-top: 100px;
+    padding-top: 75px;
     width: 90%;
   }
 
@@ -21,7 +21,7 @@
   flex-shrink: 4;
   height: auto;
   flex-wrap: wrap;
-  flex-direction:row;
+  flex-direction: row;
 }
 
 .flexbox {
@@ -46,16 +46,16 @@
 
   .about {
     flex: 1 0 30%;
-    aspect-ratio: 2;
+    aspect-ratio: 2.5;
   }
 
   .about input {
-    aspect-ratio: 2;
+    aspect-ratio: 2.5;
   }
 
   .wideAbout {
     flex: 1 0 100%;
-    aspect-ratio: 6;
+    aspect-ratio: 9;
     border-radius: 25px;
     align-items: center;
     justify-content: center;
