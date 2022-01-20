@@ -18,8 +18,8 @@ if (lm)
 function selectExperience(name) {
     switch(name) {
         case "IH-text":
-            if (ih.style.display !== "block") {
-                ih.style.display = "block";
+            if (ih.style.display !== "flex") {
+                ih.style.display = "flex";
                 ihInput.style.border = "solid var(--color4)";
             } else {
                 ih.style.display = "none";
@@ -33,8 +33,8 @@ function selectExperience(name) {
         case "SW-text":
             ih.style.display = "none";
             ihInput.style.border = "";
-            if (sw.style.display !== "block") {
-                sw.style.display = "block";
+            if (sw.style.display !== "flex") {
+                sw.style.display = "flex";
                 swInput.style.border = "solid var(--color4)";
             } else {
                 sw.style.display = "none";
@@ -48,8 +48,8 @@ function selectExperience(name) {
             ihInput.style.border = "";
             sw.style.display = "none";
             swInput.style.border = "";
-            if (lm.style.display !== "block") {
-                lm.style.display = "block";
+            if (lm.style.display !== "flex") {
+                lm.style.display = "flex";
                 lmInput.style.border = "solid var(--color4)";
             } else {
                 lm.style.display = "none";

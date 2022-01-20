@@ -11,6 +11,8 @@ projectNames.forEach(proj => {
         text.style.display = "none";
 });
 
+SelectProject("softbody");
+
 function SelectProject(name) {
     for (i = 0; i < projectNames.length; i++) {
         if (name === projectNames[i] && projectTexts[i].style.display !== "flex") {
