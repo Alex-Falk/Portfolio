@@ -121,7 +121,7 @@ iframe {
   }
 
   @media only screen and (max-width: 700px) {
-    .width25 { width: 100%;}
+    .width25 { width: 100%; position: relative;}
     .width75 { width: 100%;}
     .about { flex: 1 0 100%;}
     .wideAbout { flex: 1 0 100%; aspect-ratio: 2;}
