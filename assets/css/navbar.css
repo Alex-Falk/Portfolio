@@ -36,7 +36,7 @@
     color: var(--color5);
   }
     
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 700px) {
     .navbar a { font-size: 12px; padding: 2px 2px 2px 2px;}
   }
 

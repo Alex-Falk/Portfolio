@@ -15,6 +15,9 @@ if (sw)
 if (lm)
     lm.style.display = "none";
 
+var header = document.getElementsByClassName("navbar");
+var body = document.body.style.marginTop = header.style.height;
+
 function selectExperience(name) {
     switch(name) {
         case "IH-text":
